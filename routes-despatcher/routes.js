@@ -18,6 +18,6 @@ export default function MiddlerWares(app) {
   app.use("/api/movies", movieRouter)
   app.use("/api/rentals", rentelRouter)
   app.use(errorHandler)
-  app.user(helmet())
-  app.user(compression())
+  app.use(helmet())
+  app.use(compression())
 }

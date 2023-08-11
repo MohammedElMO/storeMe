@@ -3,8 +3,6 @@ import { logger } from "../handleErr/logger.js"
 
 export default function Db() {
   mongoose
-    .connect(process.env.MONGOOSE_DB_HOST + "", {
-      useUnifiedTopology: true,
-    })
-    .then(() => logger.info("connection to mongodb on the vidly Db..."))
+    .connect(process.env.MONGODB_CONNECTION)
+    .then(() => console.log('Running...'))
 }
