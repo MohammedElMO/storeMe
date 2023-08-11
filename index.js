@@ -7,9 +7,10 @@ import logExecptions, { logger } from "./handleErr/logger.js"
 
 logExecptions()
 ;(async function () {
-DBConnection()
-const app = express()
-MiddlerWares(app)
+  DBConnection()
+  const app = express()
+  MiddlerWares(app)
 
-app.listen(3001, () => logger.info("Port 3000 is ready..."))
+  const PORT = process.env.PORT || 3001
+  app.listen(PORT, () => logger.info("Port 3000 is ready..."))
 })()
