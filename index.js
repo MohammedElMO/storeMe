@@ -9,6 +9,7 @@ logExecptions()
 ;(async function () {
   DBConnection()
   const app = express()
+  app.get('/',(req,res) => res.send("WELCOME HOME BRO"))
   MiddlerWares(app)
 
   const PORT = process.env.PORT || 3001
